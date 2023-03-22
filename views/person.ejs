@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/assets/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card_01" style="margin-bottom: 20px;">
+    <h1> Person: <%= ID %> </h1>
+    <h2> Message: <%= Message %> </h2>
+    </div>
+  
+    <% let mensaje = () => {
+        for (let i = 0; i < Time; i++ ) { %>
+            <h3>
+                <%= Message %>
+                <%= ID %>
+            </h3>
+        <% } 
+    } %>
+
+    <div class="card_01">
+    <% switch (Message) { 
+        case "Hola": %>
+            <h3>
+                <% mensaje() %>
+            </h3>
+        <% break; 
+    
+        case "Bienvenido": %>
+            <h3>
+                <% mensaje() %>
+            </h3>
+        <% break; 
+    
+        case "Adios": %>
+            <h3>
+                <% mensaje() %>
+            </h3>
+        <% break; 
+    
+        default: %>
+            <h3>error</h3>
+        <% break; 
+    } %>
+    </div>
+    
+
+    
+
+                                    <!-- localhost:3000/person/Eduardo?message=Hola&time=5 -->
+</body>
+
+</html>
